@@ -1,7 +1,7 @@
 # 🌤 WeatherIQ — Full-Stack Weather Intelligence App
 
 > **PM Accelerator — AI Engineer Intern Technical Assessment (Full Stack)**  
-> Built by: [Your Name] | [Your Email]
+> Built by: JOSEPH ADEABAH | [ANSAHADEABAJ45@GMAIL.COM]
 
 ---
 
