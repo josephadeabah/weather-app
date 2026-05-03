@@ -211,7 +211,7 @@ weather-app/
 
 ## 📝 About PM Accelerator
 
-[Product Manager Accelerator](https://www.linkedin.com/company/product-manager-accelerator/) helps aspiring product managers break into the field through mentorship, real-world projects, and a community of PMs across the industry. Their programs bridge the gap between education and hands-on product management experience.
+[Product Manager Accelerator](https://www.linkedin.com/school/pmaccelerator/posts/?feedView=all/) helps aspiring product managers break into the field through mentorship, real-world projects, and a community of PMs across the industry. Their programs bridge the gap between education and hands-on product management experience.
 
 ---
 
