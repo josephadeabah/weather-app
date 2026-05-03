@@ -1,0 +1,42 @@
+services:
+  mongodb:
+    image: mongo:4.4
+    container_name: weather_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: weather_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017
+      - WEATHER_API_KEY=${WEATHER_API_KEY}
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY}
+      - MAPS_API_KEY=${MAPS_API_KEY}
+    depends_on:
+      - mongodb
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: weather_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_MAPS_API_KEY=${MAPS_API_KEY}
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:
